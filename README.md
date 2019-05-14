@@ -57,7 +57,7 @@ Aquí tienes un ejemplo de una posible estructura de clases para llevar a cabo l
 Diagrama de clases general para una posible solución de la tarea: relaciones de herencia y composición entre clases que representan cuentas bancarias: CuentaBancaria, CuentaAhorro, CuentaCorriente, etc. Implementación de la interfaz Imprimible.
 El código fuente Java de cada clase debería incluir comentarios en cada atributo (o en cada conjunto de atributos) y método (o en cada conjunto de métodos del mismo tipo) indicando su utilidad. El programa principal (clase principal) también debería incluir algunos comentarios explicativos sobre su funcionamiento y la utilización de objetos de las distintas clases utilizadas.
 
-´´´Java
+```Java
 package PROG09;
 
 import java.time.LocalDate;
@@ -66,5 +66,5 @@ public interface Imprimible {
     public Persona getTitular();
     public void setTitular(Persona titular);
 }
-´´´  
-* Código de la interface Imprimible que enlaza CuentaBancaria con la clase Persona *  
+```  
+*Código de la interface Imprimible que enlaza la clase CuentaBancaria con la clase Persona*  
