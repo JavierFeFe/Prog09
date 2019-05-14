@@ -44,3 +44,27 @@ de mantenimiento, si es una cuenta corriente personal.
 Máximo descubierto permitido, si se trata de una cuenta corriente de empresa.
 Tipo de interés por descubierto, en el caso de una cuenta corriente de empresa.
 Comisión fija por cada descubierto, también para el caso de una cuenta corriente de empresa.
+La aplicación deberá asegurarse que la información introducida sea válida y coherente (CCC válido; saldos, comisiones y tipos de interés positivos, etc.).
+
+El programa que escribas debe cumplir al menos los siguientes requisitos:
+
+Para almacenar los objetos de tipo cuenta podrás utilizar cualquier estructura de almacenamiento que consideres oportuna (ArrayList, Hashtable, etc.).
+Para trabajar con los datos personales, debes utilizar una clase Persona que contenga la información sobre los datos personales básicos del cliente (nombre, apellidos, fecha de nacimiento).
+Para trabajar con el número de cuenta debes utilizar el modelo de Código Cuenta Cliente (CCC), que es posible que también la ya hayas usado en otras unidades.
+Para guardar las entidades autorizadas a cobrar recibos debes utilizar una Hashtable que contenga pares de tipo (código de entidad (String), máxima cantidad autorizada para un recibo).
+Aquí tienes un ejemplo de una posible estructura de clases para llevar a cabo la aplicación:
+
+Diagrama de clases general para una posible solución de la tarea: relaciones de herencia y composición entre clases que representan cuentas bancarias: CuentaBancaria, CuentaAhorro, CuentaCorriente, etc. Implementación de la interfaz Imprimible.
+El código fuente Java de cada clase debería incluir comentarios en cada atributo (o en cada conjunto de atributos) y método (o en cada conjunto de métodos del mismo tipo) indicando su utilidad. El programa principal (clase principal) también debería incluir algunos comentarios explicativos sobre su funcionamiento y la utilización de objetos de las distintas clases utilizadas.
+
+´´´Java
+package PROG09;
+
+import java.time.LocalDate;
+
+public interface Imprimible {
+    public Persona getTitular();
+    public void setTitular(Persona titular);
+}
+´´´  
+* Código de la interface Imprimible que enlaza CuentaBancaria con la clase Persona *  
